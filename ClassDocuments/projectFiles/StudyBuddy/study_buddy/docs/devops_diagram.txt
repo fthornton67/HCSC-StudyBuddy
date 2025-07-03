@@ -1,0 +1,96 @@
+STUDYBUDDY DEVOPS WORKFLOW DIAGRAM
+=====================================
+
+DEVELOPMENT PHASE
+┌─────────────────────────────────────────────────────────────┐
+│                    DEVELOPER WORKFLOW                       │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐     │
+│  │   Feature   │───▶│   Local     │───▶│   Git Push  │     │
+│  │ Development │    │   Testing   │    │             │     │
+│  └─────────────┘    └─────────────┘    └─────────────┘     │
+└─────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+┌─────────────────────────────────────────────────────────────┐
+│                   CI/CD PIPELINE                            │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐     │
+│  │ GitHub      │───▶│ Code Quality│───▶│ Unit Tests  │     │
+│  │ Actions     │    │ Checks      │    │             │     │
+│  └─────────────┘    └─────────────┘    └─────────────┘     │
+│                                │                            │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐     │
+│  │ Integration │◀───│ Build Flutter│◀───│ Security    │     │
+│  │ Tests       │    │ App         │    │ Scan        │     │
+│  └─────────────┘    └─────────────┘    └─────────────┘     │
+└─────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+┌─────────────────────────────────────────────────────────────┐
+│                   STAGING ENVIRONMENT                       │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐     │
+│  │ Deploy to   │───▶│ Automated   │───▶│ Manual      │     │
+│  │ Staging     │    │ UI Tests    │    │ Testing     │     │
+│  └─────────────┘    └─────────────┘    └─────────────┘     │
+│                                │                            │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐     │
+│  │ Performance │◀───│ User        │◀───│ QA          │     │
+│  │ Testing     │    │ Acceptance  │    │ Approval    │     │
+│  └─────────────┘    └─────────────┘    └─────────────┘     │
+└─────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+┌─────────────────────────────────────────────────────────────┐
+│                   PRODUCTION ENVIRONMENT                    │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐     │
+│  │ Deploy to   │───▶│ Feature     │───▶│ Monitoring  │     │
+│  │ Production  │    │ Flags       │    │ & Alerting  │     │
+│  └─────────────┘    └─────────────┘    └─────────────┘     │
+│                                │                            │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐     │
+│  │ Database    │◀───│ CDN         │◀───│ Analytics   │     │
+│  │ Migration   │    │ Assets      │    │ Tracking    │     │
+│  └─────────────┘    └─────────────┘    └─────────────┘     │
+└─────────────────────────────────────────────────────────────┘
+
+WHAT GETS TESTED:
+• Business logic functions
+• UI components and user interactions
+• API integrations and data flow
+• Database operations and migrations
+• Authentication and security flows
+• Performance under load
+• Cross-platform compatibility
+
+WHAT GETS BUILT:
+• Android APK files
+• iOS IPA files
+• Web builds
+• Asset bundles and resources
+• Database schemas
+• API endpoints
+
+WHAT GETS DEPLOYED:
+• Application binaries
+• Static assets (images, fonts, etc.)
+• Database migrations
+• Configuration files
+• Feature flags
+• Monitoring agents
+
+WHEN DEPLOYMENTS HAPPEN:
+• Development: Multiple times per day
+• Staging: Daily at 6 PM
+• Production: Weekly on Sundays at 2 AM
+
+MONITORING & FEEDBACK:
+• Real-time performance metrics
+• Error tracking and crash reporting
+• User analytics and engagement data
+• Infrastructure health monitoring
+• Security event logging
+
+ROLLBACK STRATEGY:
+• Automatic rollback on critical errors
+• Manual rollback process for issues
+• Database backup and restore procedures
+• Feature flag toggles for quick fixes 
