@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'dashboard_screen.dart';
+import 'study_groups_screen.dart';
+import 'schedule_screen.dart';
+import 'profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -12,10 +16,10 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [
-    const Center(child: Text('Dashboard')),
-    const Center(child: Text('Study Groups')),
-    const Center(child: Text('Schedule')),
-    const Center(child: Text('Profile')),
+    const DashboardScreen(),
+    const StudyGroupsScreen(),
+    const ScheduleScreen(),
+    const ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
