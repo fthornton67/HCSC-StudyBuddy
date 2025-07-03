@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="1400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B0000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A52A2A;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="boxGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5F5F5;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="phaseGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B0000;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#8B0000;stop-opacity:0.05" />
+    </linearGradient>
+    
+    <!-- Arrow markers -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8B0000" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="1400" fill="#FFFFFF"/>
+  
+  <!-- Title -->
+  <rect x="0" y="0" width="1200" height="80" fill="url(#headerGradient)"/>
+  <text x="600" y="45" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="28" font-weight="bold">
+    StudyBuddy DevOps Workflow Diagram
+  </text>
+  
+  <!-- Development Phase -->
+  <rect x="50" y="120" width="1100" height="200" fill="url(#phaseGradient)" stroke="#8B0000" stroke-width="2" rx="10"/>
+  <text x="600" y="150" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="20" font-weight="bold">
+    DEVELOPMENT PHASE
+  </text>
+  
+  <!-- Developer Workflow Boxes -->
+  <rect x="100" y="180" width="300" height="80" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="250" y="210" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Feature Development</text>
+  <text x="250" y="230" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">Code new features</text>
+  <text x="250" y="245" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">and bug fixes</text>
+  
+  <rect x="450" y="180" width="300" height="80" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="600" y="210" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Local Testing</text>
+  <text x="600" y="230" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">Run tests locally</text>
+  <text x="600" y="245" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">and debug issues</text>
+  
+  <rect x="800" y="180" width="300" height="80" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="950" y="210" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Git Push</text>
+  <text x="950" y="230" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">Commit and push</text>
+  <text x="950" y="245" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">to repository</text>
+  
+  <!-- Arrows -->
+  <line x1="400" y1="220" x2="450" y2="220" stroke="#8B0000" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="750" y1="220" x2="800" y2="220" stroke="#8B0000" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Down arrow to CI/CD -->
+  <line x1="600" y1="280" x2="600" y2="320" stroke="#8B0000" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- CI/CD Pipeline -->
+  <rect x="50" y="340" width="1100" height="300" fill="url(#phaseGradient)" stroke="#8B0000" stroke-width="2" rx="10"/>
+  <text x="600" y="370" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="20" font-weight="bold">
+    CI/CD PIPELINE
+  </text>
+  
+  <!-- Row 1 -->
+  <rect x="100" y="400" width="200" height="60" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="200" y="425" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="12" font-weight="bold">GitHub Actions</text>
+  <text x="200" y="440" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="10">Trigger pipeline</text>
+  
+  <rect x="350" y="400" width="200" height="60" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="450" y="425" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Code Quality</text>
+  <text x="450" y="440" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="10">Static analysis</text>
+  
+  <rect x="600" y="400" width="200" height="60" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="700" y="425" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Unit Tests</text>
+  <text x="700" y="440" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="10">Run test suite</text>
+  
+  <rect x="850" y="400" width="200" height="60" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="950" y="425" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Security Scan</text>
+  <text x="950" y="440" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="10">Vulnerability check</text>
+  
+  <!-- Row 2 -->
+  <rect x="100" y="500" width="200" height="60" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="200" y="525" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Integration Tests</text>
+  <text x="200" y="540" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="10">End-to-end testing</text>
+  
+  <rect x="350" y="500" width="200" height="60" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="450" y="525" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Build Flutter App</text>
+  <text x="450" y="540" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="10">Compile binaries</text>
+  
+  <rect x="600" y="500" width="200" height="60" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="700" y="525" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Widget Tests</text>
+  <text x="700" y="540" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="10">UI component tests</text>
+  
+  <rect x="850" y="500" width="200" height="60" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="950" y="525" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Performance Test</text>
+  <text x="950" y="540" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="10">Load testing</text>
+  
+  <!-- Arrows in CI/CD -->
+  <line x1="300" y1="430" x2="350" y2="430" stroke="#8B0000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="550" y1="430" x2="600" y2="430" stroke="#8B0000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="800" y1="430" x2="850" y2="430" stroke="#8B0000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Down arrow to Staging -->
+  <line x1="600" y1="580" x2="600" y2="620" stroke="#8B0000" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Staging Environment -->
+  <rect x="50" y="660" width="1100" height="200" fill="url(#phaseGradient)" stroke="#8B0000" stroke-width="2" rx="10"/>
+  <text x="600" y="690" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="20" font-weight="bold">
+    STAGING ENVIRONMENT
+  </text>
+  
+  <!-- Staging Boxes -->
+  <rect x="100" y="720" width="300" height="80" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="250" y="750" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Deploy to Staging</text>
+  <text x="250" y="770" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">Deploy test build</text>
+  <text x="250" y="785" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">to staging server</text>
+  
+  <rect x="450" y="720" width="300" height="80" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="600" y="750" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Automated UI Tests</text>
+  <text x="600" y="770" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">Run automated</text>
+  <text x="600" y="785" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">UI test suite</text>
+  
+  <rect x="800" y="720" width="300" height="80" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="950" y="750" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Manual Testing</text>
+  <text x="950" y="770" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">QA team testing</text>
+  <text x="950" y="785" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">and validation</text>
+  
+  <!-- Arrows in Staging -->
+  <line x1="400" y1="760" x2="450" y2="760" stroke="#8B0000" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="750" y1="760" x2="800" y2="760" stroke="#8B0000" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Down arrow to Production -->
+  <line x1="600" y1="820" x2="600" y2="860" stroke="#8B0000" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Production Environment -->
+  <rect x="50" y="880" width="1100" height="200" fill="url(#phaseGradient)" stroke="#8B0000" stroke-width="2" rx="10"/>
+  <text x="600" y="910" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="20" font-weight="bold">
+    PRODUCTION ENVIRONMENT
+  </text>
+  
+  <!-- Production Boxes -->
+  <rect x="100" y="940" width="300" height="80" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="250" y="970" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Deploy to Production</text>
+  <text x="250" y="990" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">Deploy to live</text>
+  <text x="250" y="1005" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">production servers</text>
+  
+  <rect x="450" y="940" width="300" height="80" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="600" y="970" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Feature Flags</text>
+  <text x="600" y="990" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">Enable/disable</text>
+  <text x="600" y="1005" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">new features</text>
+  
+  <rect x="800" y="940" width="300" height="80" fill="url(#boxGradient)" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="950" y="970" text-anchor="middle" fill="#8B0000" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Monitoring & Alerting</text>
+  <text x="950" y="990" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">Real-time monitoring</text>
+  <text x="950" y="1005" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="12">and alerts</text>
+  
+  <!-- Arrows in Production -->
+  <line x1="400" y1="980" x2="450" y2="980" stroke="#8B0000" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="750" y1="980" x2="800" y2="980" stroke="#8B0000" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Bottom Info Section -->
+  <rect x="50" y="1100" width="1100" height="280" fill="#F8F9FA" stroke="#8B0000" stroke-width="2" rx="10"/>
+  
+  <!-- What Gets Tested -->
+  <text x="100" y="1130" fill="#8B0000" font-family="Arial, sans-serif" font-size="16" font-weight="bold">WHAT GETS TESTED:</text>
+  <text x="120" y="1155" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Business logic functions</text>
+  <text x="120" y="1170" fill="#333333" font-family="Arial, sans-serif" font-size="12">• UI components and user interactions</text>
+  <text x="120" y="1185" fill="#333333" font-family="Arial, sans-serif" font-size="12">• API integrations and data flow</text>
+  <text x="120" y="1200" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Database operations and migrations</text>
+  <text x="120" y="1215" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Authentication and security flows</text>
+  <text x="120" y="1230" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Performance under load</text>
+  <text x="120" y="1245" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Cross-platform compatibility</text>
+  
+  <!-- What Gets Built -->
+  <text x="400" y="1130" fill="#8B0000" font-family="Arial, sans-serif" font-size="16" font-weight="bold">WHAT GETS BUILT:</text>
+  <text x="420" y="1155" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Android APK files</text>
+  <text x="420" y="1170" fill="#333333" font-family="Arial, sans-serif" font-size="12">• iOS IPA files</text>
+  <text x="420" y="1185" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Web builds</text>
+  <text x="420" y="1200" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Asset bundles and resources</text>
+  <text x="420" y="1215" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Database schemas</text>
+  <text x="420" y="1230" fill="#333333" font-family="Arial, sans-serif" font-size="12">• API endpoints</text>
+  
+  <!-- What Gets Deployed -->
+  <text x="700" y="1130" fill="#8B0000" font-family="Arial, sans-serif" font-size="16" font-weight="bold">WHAT GETS DEPLOYED:</text>
+  <text x="720" y="1155" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Application binaries</text>
+  <text x="720" y="1170" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Static assets (images, fonts)</text>
+  <text x="720" y="1185" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Database migrations</text>
+  <text x="720" y="1200" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Configuration files</text>
+  <text x="720" y="1215" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Feature flags</text>
+  <text x="720" y="1230" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Monitoring agents</text>
+  
+  <!-- Deployment Schedule -->
+  <text x="100" y="1270" fill="#8B0000" font-family="Arial, sans-serif" font-size="16" font-weight="bold">WHEN DEPLOYMENTS HAPPEN:</text>
+  <text x="120" y="1295" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Development: Multiple times per day</text>
+  <text x="120" y="1310" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Staging: Daily at 6 PM</text>
+  <text x="120" y="1325" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Production: Weekly on Sundays at 2 AM</text>
+  
+  <!-- Monitoring & Feedback -->
+  <text x="400" y="1270" fill="#8B0000" font-family="Arial, sans-serif" font-size="16" font-weight="bold">MONITORING & FEEDBACK:</text>
+  <text x="420" y="1295" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Real-time performance metrics</text>
+  <text x="420" y="1310" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Error tracking and crash reporting</text>
+  <text x="420" y="1325" fill="#333333" font-family="Arial, sans-serif" font-size="12">• User analytics and engagement data</text>
+  <text x="420" y="1340" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Infrastructure health monitoring</text>
+  <text x="420" y="1355" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Security event logging</text>
+  
+  <!-- Rollback Strategy -->
+  <text x="700" y="1270" fill="#8B0000" font-family="Arial, sans-serif" font-size="16" font-weight="bold">ROLLBACK STRATEGY:</text>
+  <text x="720" y="1295" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Automatic rollback on critical errors</text>
+  <text x="720" y="1310" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Manual rollback process for issues</text>
+  <text x="720" y="1325" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Database backup and restore procedures</text>
+  <text x="720" y="1340" fill="#333333" font-family="Arial, sans-serif" font-size="12">• Feature flag toggles for quick fixes</text>
+  
+  <!-- Footer -->
+  <text x="600" y="1390" text-anchor="middle" fill="#666666" font-family="Arial, sans-serif" font-size="12">
+    StudyBuddy DevOps Workflow - Morehouse College
+  </text>
+</svg> 
